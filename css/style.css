@@ -1,0 +1,259 @@
+/* Boilerplate */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Fixes */
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Variables */
+
+:root {
+  /* Primarios */
+
+  --red-1: hsl(0, 100%, 74%);
+  --green-0: hsl(154, 78%, 58%);
+  --green-1: hsl(154, 59%, 51%);
+  --green-2: hsl(154, 56%, 46%);
+
+  /* Segundarios */
+
+  --blue-0: hsl(248, 46%, 59%);
+  --blue-1: hsl(248, 32%, 49%);
+
+  /* Neutrales */
+
+  --dark-blue: hsl(249, 10%, 26%);
+  --g-blue: hsl(246, 25%, 77%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Font weight */
+
+  --400: 400;
+  --500: 500;
+  --600: 600;
+  --700: 700;
+}
+
+/* Layout */
+
+body {
+  background: url(/images/bg-intro-desktop.png), var(--red-1);
+}
+
+.main-container {
+  width: clamp(35rem, 90%, 110rem);
+  margin: 20rem auto;
+  display: flex;
+}
+
+/* First div LEFT */
+
+.first_div {
+  width: clamp(30rem, 90%, 50rem);
+  margin-top: 18.3rem;
+}
+
+.f_title {
+  margin-bottom: 3rem;
+  font-size: clamp(3rem, 8vw, 5rem);
+  line-height: 5rem;
+  color: var(--white);
+}
+
+.f_paragraph {
+  font-size: 1.6rem;
+  color: var(--white);
+}
+
+/* Second div RIGHT */
+
+.second_div {
+  width: clamp(30rem, 90%, 54rem);
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.s_top-btn {
+  border: none;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  border-radius: 0.65rem;
+  color: var(--white);
+  background: var(--blue-1);
+  box-shadow: 0 7px 0 rgb(0 0 0 / 0.2);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.s_top-btn:hover {
+  background: var(--blue-0);
+  transform: translateY(-0.15rem);
+  box-shadow: 0 7px 3px rgb(0 0 0 / 0.075);
+}
+
+.s_whitesplash {
+  border-radius: 0.65rem;
+  padding: 4rem;
+  background: var(--white);
+  box-shadow: 0 7px 0 rgb(0 0 0 / 0.2);
+}
+
+.s_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_div {
+  margin-bottom: 2rem;
+}
+
+.s_form input {
+  width: 100%;
+  font-weight: 600;
+  color: var(--dark-blue);
+  padding: 2rem;
+  padding-left: 3rem;
+  border-radius: 0.65rem;
+  border: 1px solid var(--g-blue);
+}
+
+/*! Error displays */
+
+.s_form-error {
+  border: 2px solid var(--red-1);
+}
+
+.input_error {
+  border: 2px solid var(--red-1) !important;
+  color: var(--red-1) !important;
+  background-image: url(/images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+}
+
+.error {
+  display: none;
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  color: var(--red-1);
+  text-align: right;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.display_error {
+  display: block;
+}
+
+/*! End error displays */
+
+.s_last-btn {
+  border: none;
+  padding: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 0.65rem;
+  border: 1px solid var(--green-2);
+  border-bottom: 5px solid var(--green-2);
+  background: var(--green-1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.s_last-btn:hover {
+  background: var(--green-0);
+  transform: translateY(-0.15rem);
+}
+
+.s_text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--g-blue);
+}
+
+.tas {
+  color: var(--red-1);
+}
+
+/* Footer */
+
+.attribution {
+  width: 30rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  font-weight: var(--400);
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.attribution a {
+  color: var(--blue-1);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+  }
+
+  .first_div {
+    margin-top: 0;
+    margin-bottom: 7rem;
+  }
+
+  .s_top-btn {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .f_title {
+    text-align: center;
+    line-height: 4rem;
+  }
+
+  .f_paragraph {
+    text-align: center;
+  }
+
+  .second_div {
+    margin-left: 0;
+  }
+
+  .s_whitesplash {
+    padding: 2.5rem;
+  }
+
+  .s_form input {
+    padding: 1.7rem;
+  }
+
+  .s_text {
+    line-height: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
