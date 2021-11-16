@@ -48,7 +48,7 @@ html {
 /* Layout */
 
 body {
-  background: url("./images/bg-intro-desktop.png"), var(--red-1);
+  background: url("../images/bg-intro-desktop.png"), var(--red-1);
 }
 
 .main-container {
@@ -139,7 +139,7 @@ body {
 .input_error {
   border: 2px solid var(--red-1) !important;
   color: var(--red-1) !important;
-  background-image: url("./images/icon-error.svg");
+  background-image: url("../images/icon-error.svg");
   background-repeat: no-repeat;
   background-position: 95% 50%;
 }
